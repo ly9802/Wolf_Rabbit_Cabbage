@@ -1,4 +1,4 @@
-# Wolf_Rabbit_Cabbage
+# Ferry man
 A classical problem: a ferry man brings a wolf, a rabbit and a cabbage and the man is going to take them cross the river. 
 However, the boat is too small to load all members. The man can bring only one member at a time.
 Every one should know the wolf will eat the rabbit, the rabbit will eat the cabbage,if there is not the man nearby.
