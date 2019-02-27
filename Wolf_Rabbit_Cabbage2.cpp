@@ -70,14 +70,11 @@ void output(int ss[])
     }//end for loop
 }
 void Leave_bank_B(int step2,int lastcargo){
-    
-	
 	if(safe(0,bb)==true){
 	   //print(step2,0,"back");//bring nothing
 	   solution[step2]=0;
            if(judge(aa)==true){
 	       Leave_bank_A(step2+1,0);
-	       
 	       solution[step2]=0;
 	   }
 	   else{
@@ -89,30 +86,23 @@ void Leave_bank_B(int step2,int lastcargo){
 	    int i=0;
 	    for(i=1;i<4;i++){
 		if((bb[i]!=lastcargo)&&(bb[i]!=0)&&(safe(i,bb)==true)){
-		    
 		    aa[i]=bb[i];
-		    
 		    solution[step2]=bb[i];
 		    bb[i]=bb[i]-bb[i];
 		    if(judge(aa)==true){Leave_bank_A(step2+1,aa[i]);}
 		    else{cout<<"end"<<endl;}
-		    
 		    solution[step2]=0;
 		    bb[i]=aa[i];
 		    aa[i]=0;
 		}	
 	    }//end for loop
-	}
-        
+	}     
 }
 void Leave_bank_A(int step,int lastcargo){
       int i=0;
-    
       for(i=1;i<4;i++){
-	  if( (aa[i]!=lastcargo)&&(aa[i]!=0)&&(safe(i,aa)==true) ){
-	      
+	  if( (aa[i]!=lastcargo)&&(aa[i]!=0)&&(safe(i,aa)==true) ){ 
              bb[i]=aa[i];
-	     
 	     solution[step]=aa[i];
 	     aa[i]=aa[i]-aa[i];
 	     if(judge(aa)==true){Leave_bank_B(step+1,bb[i]);}
@@ -122,14 +112,11 @@ void Leave_bank_A(int step,int lastcargo){
 		 output(solution);
 		 cout<<"end"<<endl;
 	     }
-	     
 	     solution[step]=0;
 	     aa[i]=bb[i];
-	     bb[i]=0;
-	     
+	     bb[i]=0; 
 	  }
-      }//end for loop
-    
+      }//end for loop  
 }
 void main(){
    int i=0;
