@@ -141,6 +141,7 @@ void main(){
    }
    //cout<<safe(0,aa)<<endl;
    Leave_bank_A(1,0);
+   system("pause");
    //cout<<judge(aa)<<endl;
    //print(3, "go");
 }
